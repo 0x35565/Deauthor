@@ -9,7 +9,7 @@ Deauthor uses the Layer 2 ARP protocol alongside that Dot11 Deauthentication fra
 
 IP Address: 172.20.10.1 MAC Address: f6:0e:01:21:d0:64
 
-It gives you the IP and MAC Address of EACH node on the network. And when entered and Deauthing has commenced the Target node will be disonnected from the network within a matter of seconds. NOTE: This only works on wireless devices as mentioned at the beggining. 
+It gives you the IP and MAC Address of EACH node on the network. And when entered and Deauthing has commenced the Target node will be disonnected from the network within a matter of seconds. NOTE: This only works on wireless devices as mentioned at the beginning. 
 
 **Is this tool powerful?**
 This tool is powerful, simple and easy to navigate. 
