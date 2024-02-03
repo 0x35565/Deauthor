@@ -15,7 +15,7 @@ It gives you the IP and MAC Address of EACH node on the network. And when entere
 This tool is powerful, simple and easy to navigate. 
 
 **What operating systems have support?**
-Look, at the current time of writing this only Linux. If the tool gains popularity I will be adding support for windows (:
+Look, at the current time of writing this only Linux. Windows support can easily be added 
 
 **Basic Usage**
 Here I've compiled an overly simplified set of procedures to use the tool with a summarised explanation and dot points. 
