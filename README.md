@@ -1,6 +1,9 @@
 # Deauthor
 Deauthor, this tool can remove any wireless device on your local area network with ease, if you came seeking a tool that will give you more power over your network without any administrative rights to your routers interface then this is the tool for you. 
 
+**Requirements**
+to use this tool you require scapy to be installed, to install scapy run the following within the cloned directory. pip3 install -r requirements.txt and that will install scapy for you. 
+
 **How does it work?**
 Deauthor uses the Layer 2 ARP protocol alongside that Dot11 Deauthentication frames but more on that later. Address Resolution Protocol is used to discover the hosts on your network. After all hosts have been scanned by simply selecting "Scan Network" via typing 1 and clicking enter within the Deauthor tool devices will be displayed as follows in the programs output: 
 
