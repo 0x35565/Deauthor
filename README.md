@@ -1,5 +1,5 @@
 # Deauthor
-Deauthor, this tool can remove any wireless device on your local area network with ease, if you came seeking a tool that will give you more power over your network without any administrative rights to your routers interface then this is the tool for you. 
+This tool can remove any wireless device on your local area network with ease, if you came seeking a tool that will give you more power over your network without any administrative rights to your routers interface then this is the tool for you. 
 
 
 **NOTE:**
@@ -8,7 +8,7 @@ Deauthor, this tool can remove any wireless device on your local area network wi
 
 
 **How does it work?**
-Deauthor uses the Layer 2 ARP protocol alongside that Dot11 Deauthentication frames but more on that later. Address Resolution Protocol is used to discover the hosts on your network. After all hosts have been scanned by simply selecting "Scan Network" via typing 1 and clicking enter within the Deauthor tool devices will be displayed as follows in the programs output: 
+Deauthor uses the Layer 2 ARP protocol alongside that Dot11 Deauthentication frames but more on that later. Address Resolution Protocol is used to discover the hosts on your network. After all hosts have been scanned by simply selecting "Scan Network" the programs output is as follows: 
 
 IP Address: 172.20.10.1 MAC Address: f6:0e:01:21:d0:64
 
@@ -16,11 +16,11 @@ It gives you the IP and MAC Address of EACH node on the network. And when entere
  
 
 **What operating systems have support?**
-Look, at the current time of writing this only Linux. Though windows support can be easily added.  
+At the current time of writing this only Linux. Though windows support can be easily added.  
 
 
 **Usage**
-Here I've compiled an overly simplified set of procedures to use the tool with a summarised explanation and dot points. 
+Here I've compiled an overly simplified set of steps to use the tool with a summarised explanation and dot points. 
 
 
 firstly, install requirements, pip3 install -r requirements.txt ensure that you're in the deauthor directory when doing this. 
