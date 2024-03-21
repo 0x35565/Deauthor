@@ -25,6 +25,6 @@ It gives you the IP and MAC Address of EACH node on the network. And when entere
  
 
 **What operating systems have support?**
-At the current time of writing this only Linux. Though windows support can be easily added.  
+All operating systems.   
 
 
