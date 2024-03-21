@@ -8,6 +8,14 @@ import time
 
 global get_gateway
 
+def clear_screen():
+    operating_system = os.name
+    if operating_system == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+ 
+
 def deauth():  
     def mac_addr():
         global mac_address
@@ -32,7 +40,7 @@ def deauth():
         
     
     
-    os.system('clear')
+    clear_screen()
     menu_of_items_Deauth = input('''
 | ## Deauth ##
 |
@@ -53,7 +61,7 @@ def deauth():
 
         # clears the terminal and returns deauth() to either go back or start the attack. 
         
-        os.system('clear')
+        clear_screen()
         return deauth()
 
     elif menu_of_items_Deauth == '2':
@@ -89,7 +97,7 @@ def deauth():
     # Return to
     
     else:
-        os.system('clear')
+        clear_screen()
         return deauth()
         
     
@@ -136,7 +144,8 @@ def menu():
 
     # Menu of items, the users begins here. 
     
-    os.system('clear')
+    clear_screen()
+
     men_u = input('''
 | ## Deauthor | Made by StaleCrescent65 ##
 |
@@ -157,4 +166,4 @@ def menu():
         deauth()        
     
 
-menu()  
+menu()
