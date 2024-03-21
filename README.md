@@ -1,3 +1,10 @@
+![image](https://github.com/coolpancakes/Deauthor/assets/73265375/1e24dd76-eea5-432a-a075-a8b8dd03f87f)
+
+
+
+
+
+
 # Deauthor
 This tool can remove any wireless device on your local area network with ease, if you came seeking a tool that will give you more power over your network without any administrative rights to your routers interface then this is the tool for you. 
 
