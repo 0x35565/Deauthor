@@ -10,6 +10,9 @@
 # Deauthor
 This tool can remove any wireless device on your local area network with ease, if you came seeking a tool that will give you more power over your network without any administrative rights to your routers interface then this is the tool for you. 
 
+**Setup**
+pip3 install -r requirements.txt
+python main.py
 
 **NOTE:**
 1. This tool requires administrative privileges to run on your device.
