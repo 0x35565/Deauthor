@@ -8,7 +8,7 @@
 
 
 # Deauthor
-This tool can remove any wireless device on your local area network with ease, if you came seeking a tool that will give you more power over your network without any administrative rights to your routers interface then this is the tool for you. 
+With this simple and effective tool you can easily remove ANY wireless device to your network in an instant without any administrative rights to your routers interface. Please read below for more information.  
 
 # Setup and usage 
 pip3 install -r requirements.txt
