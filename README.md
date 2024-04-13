@@ -16,10 +16,11 @@ python deauthor.py
 use numbers to navigate the menu. 
 
 # Please NOTE: 
-1. This tool requires administrative privileges in order to access layer 3 to send and receive packets on your network. 
+
+1. The tool requires administrative privileges in order to access layer 3 to send and receive packets on your network. 
 2. This only works on devices that are wirelessly connected to your network. 
 
-# How does it work (for nerds)
+# The innerworkings of the tool (for nerds)
 Deauthor uses the Layer 2 ARP protocol alongside that, the Dot11 protocol. Address Resolution Protocol is used to discover the hosts on your network. After all hosts have been scanned by simply selecting the number associated with the string "Scan Network" the programs output is as follows: 
 
 IP Address: 172.20.10.1 MAC Address: f6:0e:01:21:d0:64
@@ -27,6 +28,17 @@ IP Address: exampleip MAC Address: ff:ff:ff:ff:ff:ff
 IP Address: exampleip MAC Address: ff:ff:ff:ff:ff:ff
 
 It gives you the IP and MAC Address of every node connected to your LAN. And when entered and Deauthing has commenced the Target node will be disonnected from the network within a matter of seconds, **Please NOTE** that this only works on devices that are WIRELESSLY connected to your LAN. 
+
+Now, how does Deauthing actually work? So using scapy which is a packet manipulation module the frame looks similar to this: RadioTap()/Ether()/Dot11(subtype=1100)
+
+**Breaking the packet down.**
+
+RadioTap() to add addional essential information to the frame, without radiotap the frame does not send properly over the wire and results in a malformed packet.. 
+Ether() to automatically retrieve the source mac address of the interface we're sending from because we're super lazy. NOTE: Ether is not essential for this to work, it's convenience.
+Dot11() This part of the packet is the Dot11 protocol itself, the subtype argument that tells the computer that we want to use the subtype 1100 which is Deauthentication. Deauthentication is the equivalent to disconnecting from a wireless network manually, we c 
+
+https://en.wikipedia.org/wiki/802.11_frame_types
+
 
 # What operating systems does Deauthor run on? 
 
