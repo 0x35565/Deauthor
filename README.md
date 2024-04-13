@@ -1,4 +1,4 @@
-![image](https://github.com/coolpancakes/Deauthor/assets/73265375/3ac4e02c-d87c-4955-90e1-8388895c976e)
+ ![image](https://github.com/coolpancakes/Deauthor/assets/73265375/3ac4e02c-d87c-4955-90e1-8388895c976e)
 
 
 
@@ -35,9 +35,9 @@ Now, how does Deauthing actually work? So using scapy which is a packet manipula
 
 RadioTap() to add addional essential information to the frame, without radiotap the frame does not send properly over the wire and results in a malformed packet.. 
 Ether() to automatically retrieve the source mac address of the interface we're sending from because we're super lazy. NOTE: Ether is not essential for this to work, it's convenience.
-Dot11() This part of the packet is the Dot11 protocol itself, the subtype argument that tells the computer that we want to use the subtype 1100 which is Deauthentication. Deauthentication is the equivalent to disconnecting from a wireless network manually, we c 
+Dot11() This part of the packet is the Dot11 protocol itself, the subtype argument sets it to the subtype 1100 which is Deauthentication. It's a management frame used by the router on end devices that are in the process of disconnecting themselves from the network. 
 
-https://en.wikipedia.org/wiki/802.11_frame_types
+If you want a more in depth explanation of the Dot11 protocol, i encourage you to visit: https://en.wikipedia.org/wiki/802.11_frame_types which explains what each field 
 
 
 # What operating systems does Deauthor run on? 
