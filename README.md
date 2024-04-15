@@ -21,7 +21,7 @@ use numbers to navigate the menu.
 2. This only works on devices that are wirelessly connected to your network. 
 
 # The innerworkings of the tool (for nerds)
-Deauthor uses the Layer 2 ARP protocol alongside that, the Dot11 protocol. Address Resolution Protocol is used to discover the hosts on your network. After all hosts have been scanned by simply selecting the number associated with the string "Scan Network" the programs output is as follows: 
+Deauthor uses the Layer 2 ARP protocol alongside that, the Dot11 protocol. Address Resolution Protocol is used to discover the hosts on your network. After all hosts have been scanned by simply selecting the number associated with "Scan Network" the programs output is as follows: 
 
 IP Address: 172.20.10.1 MAC Address: f6:0e:01:21:d0:64
 IP Address: exampleip MAC Address: ff:ff:ff:ff:ff:ff 
@@ -37,11 +37,10 @@ RadioTap() to add addional essential information to the frame, without radiotap 
 Ether() to automatically retrieve the source mac address of the interface we're sending from because we're super lazy. NOTE: Ether is not essential for this to work, it's convenience.
 Dot11() This part of the packet is the Dot11 protocol itself, the subtype argument sets it to the subtype 1100 which is Deauthentication. It's a management frame used by the router on end devices that are in the process of disconnecting themselves from the network. 
 
-If you want a more in depth explanation of the Dot11 protocol, i encourage you to visit: https://en.wikipedia.org/wiki/802.11_frame_types which explains what each field 
-
+If you want a more in depth explanation of the Dot11 protocol, i encourage you to visit: https://en.wikipedia.org/wiki/802.11_frame_types which gives you a full list of the available subtypes and lots of other juicy information. 
 
 # What operating systems does Deauthor run on? 
 
-POSIX, Windows you name it, we support it.  
+POSIX, Windows
 
 
