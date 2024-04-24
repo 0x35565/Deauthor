@@ -17,7 +17,7 @@ use numbers to navigate the menu.
 
 # Please NOTE: 
 
-1. The tool requires administrative privileges in order to access layer 3 to send and receive packets on your network. 
+1. The tool requires administrative privileges in order to access layer 2 to send and receive packets on your network. 
 2. This only works on devices that are wirelessly connected to your network. 
 
 # The innerworkings of the tool (for nerds)
