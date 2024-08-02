@@ -5,8 +5,6 @@
 
 
 
-# NOTE:
-If you had python installed on windows 10 and upgraded to windows 11 with that previous python version you may need to uninstall every instance of python on your computer and reinstall it if this script is not working when you're double clicking it, alternatively you can run the script from the CMD line. 
 
 # Deauthor
 With this simple and effective tool you can easily remove ANY wireless device to your network in an instant without any administrative rights to your routers interface. Please read below for more information.  
