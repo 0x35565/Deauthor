@@ -1,4 +1,5 @@
- ![image](https://github.com/coolpancakes/Deauthor/assets/73265375/3ac4e02c-d87c-4955-90e1-8388895c976e)
+![image](https://github.com/user-attachments/assets/633e6681-a15a-46fb-86c7-711a7b38e6b1)
+
 
 
 
