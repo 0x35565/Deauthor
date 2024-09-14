@@ -147,7 +147,7 @@ def menu():
     clear_screen()
 
     men_u = input('''
-| ## Deauthor | Made by cookpancakes ##
+| ## Deauthor | Made by h0hr ##
 |
 |    
 | 1) Scan Network
